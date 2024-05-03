@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../../styles/globals.css";
 import { Montserrat } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={montserrat.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
