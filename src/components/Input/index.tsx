@@ -14,8 +14,8 @@ export default function Input({ inputValue, setInputValue, submitTask }: { input
         <>
             <input
                 type="text"
-                placeholder="Type your task..."
-                className="flex-1 border-0 focus:outline-none bg-transparent p-10px"
+                placeholder="Task..."
+                className="w-full sm:w-auto h-10 sm:h-auto py-2 sm:py-3 px-4 sm:px-6 border-0 focus:outline-none bg-transparent"
                 value={inputValue}
                 onChange={handleInput}
                 onKeyDown={handleInputSubmit}

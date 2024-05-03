@@ -8,9 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+       sans: ['var(--font-family-montserrat)', 'sans-serif'],
+      },
       colors: {
         "btn-primary": "#FF5945",
         "row-primary": "#EDEEF0",
+        "primary": "#EA394E",
+        "secondary": "#0DA8FF",
+        "tertiary": "#01E66F",
       },
       spacing: {
         '10px': '10px',

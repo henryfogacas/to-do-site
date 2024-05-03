@@ -28,7 +28,7 @@ export default function TaskManager() {
 
     return (
         <>
-            <div className="flex items-center bg-row-primary space-x-1 mt-5 rounded-full">
+            <div className="flex items-center bg-row-primary space-x-1 rounded-full">
                 <Input inputValue={inputValue} setInputValue={setInputValue} submitTask={submitTask}/>
                 <Button submitTask={submitTask} />
             </div>
