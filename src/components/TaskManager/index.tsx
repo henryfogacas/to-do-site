@@ -8,9 +8,11 @@ import Button from "../Button"
 export default function TaskManager() {
     const [task, setTask] = useState<string[]>([])
     const [inputValue, setInputValue] = useState<string>('')
+    const [checkedTasks, setCheckedTasks] = useState<boolean[]>([])
 
     function addTask(newTask: string) {
         setTask([...task, newTask])
+        setCheckedTasks([...checkedTasks, false])
     }
 
     function submitTask() {
@@ -20,10 +22,11 @@ export default function TaskManager() {
         }
     }
 
-
     function deletetask(taskIndex: number) {
         const newTasks = task.filter((_, index) => index !== taskIndex)
+        const newCheckedTasks = checkedTasks.filter((_, index) => index !== taskIndex)
         setTask(newTasks)
+        setCheckedTasks(newCheckedTasks)
     }
 
     return (
@@ -32,7 +35,7 @@ export default function TaskManager() {
                 <Input inputValue={inputValue} setInputValue={setInputValue} submitTask={submitTask}/>
                 <Button submitTask={submitTask} />
             </div>
-            <Tasks tasks={task} deleteTask={deletetask}/>
+            <Tasks tasks={task} deleteTask={deletetask} checkedTasks={checkedTasks} setCheckedTasks={setCheckedTasks}/>
         </>
     )
 }

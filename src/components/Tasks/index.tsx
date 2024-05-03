@@ -1,16 +1,13 @@
 'use client'
 
-import { useState } from "react";
-
 import Image from "next/image";
 
 import Trash from '../../../public/icons/trash.svg'
 import Unchecked from '../../../public/icons/unchecked.svg'
 import Checked from '../../../public/icons/checked.svg'
 
-export default function Tasks({ tasks, deleteTask }: { tasks: any[]; deleteTask: any; }) {
-    const [checkedTasks, setCheckedTasks] = useState<boolean[]>(new Array(tasks.length).fill(false));
-
+export default function Tasks({ tasks, deleteTask, checkedTasks, setCheckedTasks }: { tasks: any[]; deleteTask: any; checkedTasks: boolean[]; setCheckedTasks: any;  }) {
+   
     const handleTaskClick = (index: number) => {
         const newCheckedTasks = [...checkedTasks];
         newCheckedTasks[index] = !newCheckedTasks[index];

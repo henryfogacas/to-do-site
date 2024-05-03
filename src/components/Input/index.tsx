@@ -14,7 +14,7 @@ export default function Input({ inputValue, setInputValue, submitTask }: { input
         <>
             <input
                 type="text"
-                placeholder="Task..."
+                placeholder="Tarefas..."
                 className="w-full sm:w-auto h-10 sm:h-auto py-2 sm:py-3 px-4 sm:px-6 border-0 focus:outline-none bg-transparent"
                 value={inputValue}
                 onChange={handleInput}
