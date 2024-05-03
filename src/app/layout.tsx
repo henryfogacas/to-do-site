@@ -9,8 +9,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "To do site",
-  description: "Site created to manage your tasks",
+  title: "Lista de tarefas",
+  description: "Site criado para organizar suas tarefas",
 };
 
 export default function RootLayout({
